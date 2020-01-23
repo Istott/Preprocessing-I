@@ -20,7 +20,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
+	font-size: 62.5%;
 	font: inherit;
 	vertical-align: baseline;
 }
@@ -50,10 +50,223 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	Max-width: 100%;
+	
+}
+
+@titlecolor: #DAA520;
+@titlecoloralt: dimgray;
+
+.mainboxstyles() {
+	border: 1px @titlecoloralt solid;
+	border-top: 8px gray solid;
+	border-top-right-radius: 5%;
+	padding: 2% 2%;
+}
+
+.sidebarstyles() {
+	padding: 4% 0;
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	font-family: 'Libre Baskerville', serif;
 }
+
+.container {
+	width: 100%;
+	display: flex;
+	border: 1px white solid;
+	padding: 0 10%;
+
+
+	h1 {
+		font-size: 2rem;
+		color: #FAF0E6;
+		display: flex;
+		justify-content: center;
+	}
+
+	h2 {
+		font-size: 1.8rem;
+		color: @titlecolor;
+	}
+
+	h3 {
+		font-size: 1.5rem;
+	}
+
+	h4 {
+		font-size: 1.2rem;
+	}
+}
+
+.sidebar {
+	background-color: @titlecoloralt;
+	.sidebarstyles();
+
+	.contact {
+		.sidebarstyles();
+		
+
+		.address {
+			display: flex;
+			justify-content: space-evenly;
+			flex-direction: column;
+			align-items: center;
+			padding: 5% 0 0 0;
+		}
+	
+
+		.phone {
+			.sidebarstyles();
+			display: flex;
+			justify-content: space-evenly;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.email {
+			.sidebarstyles();
+			display: flex;
+			justify-content: space-evenly;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.skills {
+
+			.personal {
+				padding: 1%;
+			}
+
+			.professional {
+				padding: 1%;
+			}
+		}
+	} //skills
+
+	h2 {
+		background-color:	#4B4B4B;
+	}
+
+	ul {
+		list-style: none; /* Remove default bullets */
+	  }
+	  
+	ul li::before {
+	content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+	color: @titlecolor; /* Change the color */
+	font-weight: bold; /* If you want it to be bold */
+	display: inline-block; /* Needed to add space between the bullet and the text */
+	width: 1em; /* Also needed for space (tweak if needed) */
+	margin-left: -1em; /* Also needed for space (tweak if needed) */
+	padding: 1% 8%;
+	}
+} //sidebar
+
+.main {
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: column;
+	width: 100%;
+	border: 1px white solid;
+	background-color: #FAF0E6;
+	padding:0 2%;
+
+	.statement {
+		.mainboxstyles();
+
+	} //statement
+
+	.education {
+		.mainboxstyles();
+
+		.school {
+			padding: 2% 0
+		}
+	}
+
+	.experience {
+		.mainboxstyles();
+
+		.work {
+			padding: 2% 0;
+		}
+	}
+
+	.references {
+		.mainboxstyles();
+
+		ul {
+			list-style: none; /* Remove default bullets */
+		  }
+		  
+		ul li::before {
+		content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+		color: @titlecolor; /* Change the color */
+		font-weight: bold; /* If you want it to be bold */
+		display: inline-block; /* Needed to add space between the bullet and the text */
+		width: 1em; /* Also needed for space (tweak if needed) */
+		margin-left: -1em; /* Also needed for space (tweak if needed) */
+		padding: 1% 2%;
+		}
+	}
+
+
+
+	.icons {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		height: 10vh;
+		width: 100%;
+
+		li {
+			width: 25%;
+			background-color: @titlecoloralt;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			
+		}
+
+	}
+
+	
+
+
+	
+} //main
+
+//media queiry for 500px//
+
+@media (max-width: 500px) {
+
+	.container {
+		flex-direction: column;
+		padding:2% 5%;
+
+		.main {
+			padding: 2% 0;
+		}
+
+		.sidebar {
+			padding: 2% 0;
+
+			.topimg {
+				display: flex;
+				justify-content: center;
+			}
+		}
+	}
+}
+
+
+
+
+
 
