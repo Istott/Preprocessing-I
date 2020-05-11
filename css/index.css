@@ -141,18 +141,19 @@ body {
 .container {
   width: 100%;
   display: flex;
-  border: 1px white solid;
-  padding: 0 10%;
+  padding: 2% 10%;
+  background: linear-gradient(141deg, #1fc8db 10%, white 41%, #2cb5e8 75%);
 }
 .container h1 {
   font-size: 2rem;
-  color: #FAF0E6;
+  color: black;
+  background: linear-gradient(180deg, #1fc8db 10%, white 41%, #1fc8db 75%);
   display: flex;
   justify-content: center;
 }
 .container h2 {
   font-size: 1.8rem;
-  color: #DAA520;
+  color: black;
 }
 .container h3 {
   font-size: 1.5rem;
@@ -161,18 +162,35 @@ body {
   font-size: 1.2rem;
 }
 .sidebar {
-  background-color: dimgray;
+  margin: 0 1% 0 0;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #1fc8db 10%, white 41%, #1fc8db 95%);
   padding: 4% 0;
 }
+.sidebar .topimg {
+  padding: 2%;
+}
+.sidebar .topimg img {
+  border-radius: 10px;
+}
 .sidebar .contact {
-  padding: 4% 0;
+  padding: 8% 0;
 }
 .sidebar .contact .address {
   display: flex;
   justify-content: space-evenly;
-  flex-direction: column;
   align-items: center;
   padding: 5% 0 0 0;
+}
+.sidebar .contact .address .home {
+  display: none;
+}
+.sidebar .contact .address:hover .home {
+  display: block;
+  color: #214e53;
+}
+.sidebar .contact .address:hover .fa-home {
+  display: none;
 }
 .sidebar .contact .phone {
   padding: 4% 0;
@@ -181,12 +199,32 @@ body {
   flex-direction: column;
   align-items: center;
 }
+.sidebar .contact .phone .number {
+  display: none;
+}
+.sidebar .contact .phone:hover .number {
+  display: block;
+  color: #214e53;
+}
+.sidebar .contact .phone:hover .fa-mobile-alt {
+  display: none;
+}
 .sidebar .contact .email {
   padding: 4% 0;
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
   align-items: center;
+}
+.sidebar .contact .email .gmail {
+  display: none;
+}
+.sidebar .contact .email:hover .gmail {
+  display: block;
+  color: #214e53;
+}
+.sidebar .contact .email:hover .fa-envelope-open {
+  display: none;
 }
 .sidebar .contact .skills .personal {
   padding: 1%;
@@ -195,7 +233,7 @@ body {
   padding: 1%;
 }
 .sidebar h2 {
-  background-color: #4B4B4B;
+  border-bottom: 2px #214e53 solid;
 }
 .sidebar ul {
   list-style: none;
@@ -204,7 +242,7 @@ body {
 .sidebar ul li::before {
   content: "\2022";
   /* Add content: \2022 is the CSS Code/unicode for a bullet */
-  color: #DAA520;
+  color: black;
   /* Change the color */
   font-weight: bold;
   /* If you want it to be bold */
@@ -221,38 +259,38 @@ body {
   justify-content: space-evenly;
   flex-direction: column;
   width: 100%;
-  border: 1px white solid;
-  background-color: #FAF0E6;
+  border-radius: 10px;
+  background: linear-gradient(141deg, #1fc8db 10%, white 41%, #2cb5e8 75%);
   padding: 0 2%;
 }
 .main .statement {
-  border: 1px dimgray solid;
-  border-top: 8px gray solid;
-  border-top-right-radius: 5%;
+  border: 1px #214e53 solid;
+  border-top: 8px #214e53 solid;
+  border-radius: 5px;
   padding: 2% 2%;
 }
 .main .education {
-  border: 1px dimgray solid;
-  border-top: 8px gray solid;
-  border-top-right-radius: 5%;
+  border: 1px #214e53 solid;
+  border-top: 8px #214e53 solid;
+  border-radius: 5px;
   padding: 2% 2%;
 }
 .main .education .school {
   padding: 2% 0;
 }
 .main .experience {
-  border: 1px dimgray solid;
-  border-top: 8px gray solid;
-  border-top-right-radius: 5%;
+  border: 1px #214e53 solid;
+  border-top: 8px #214e53 solid;
+  border-radius: 5px;
   padding: 2% 2%;
 }
 .main .experience .work {
   padding: 2% 0;
 }
 .main .references {
-  border: 1px dimgray solid;
-  border-top: 8px gray solid;
-  border-top-right-radius: 5%;
+  border: 1px #214e53 solid;
+  border-top: 8px #214e53 solid;
+  border-radius: 5px;
   padding: 2% 2%;
 }
 .main .references ul {
@@ -262,7 +300,7 @@ body {
 .main .references ul li::before {
   content: "\2022";
   /* Add content: \2022 is the CSS Code/unicode for a bullet */
-  color: #DAA520;
+  color: black;
   /* Change the color */
   font-weight: bold;
   /* If you want it to be bold */
@@ -283,10 +321,36 @@ body {
 }
 .main .icons li {
   width: 25%;
-  background-color: dimgray;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.main .icons .fa-facebook-square {
+  color: #214e53;
+}
+.main .icons .fa-facebook-square:hover {
+  color: #191970;
+}
+.main .icons .fa-instagram {
+  text-decoration: none;
+  color: #214e53;
+}
+.main .icons .fa-instagram:hover {
+  color: #191970;
+}
+.main .icons .fa-linkedin {
+  text-decoration: none;
+  color: #214e53;
+}
+.main .icons .fa-linkedin:hover {
+  color: #191970;
+}
+.main .icons .fa-github {
+  text-decoration: none;
+  color: #214e53;
+}
+.main .icons .fa-github:hover {
+  color: #191970;
 }
 @media (max-width: 500px) {
   .container {
